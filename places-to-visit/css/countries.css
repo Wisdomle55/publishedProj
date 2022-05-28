@@ -1,0 +1,45 @@
+
+body {
+    background-color:rgb(204, 211, 172);
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* secondary axis*/ 
+    justify-content: space-around; /* main axis*/
+    
+}
+
+.countries-list {
+    display: flex;
+    width: 1100px;
+    height: 220px;
+    padding-top: 20px;   
+    justify-content: space-between; 
+    
+}
+
+.country {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    flex-direction: column;
+    border-style: solid;
+    border-color: darkred;
+}
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: rgb(91, 202, 76);
+    color: white;
+}
