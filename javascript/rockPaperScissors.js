@@ -35,7 +35,7 @@ function playRound(playerHand, computerHand) {
     if (computerHand == "scissors" && playerHand == "paper") {
         return "You lose! Scissors beats Paper";
     }
-    if (computerHand == "Scissors" && playerHand == "rock") {
+    if (computerHand == "scissors" && playerHand == "rock") {
         userWins++;
         return "You win! Rock beats Scissors";
     }
