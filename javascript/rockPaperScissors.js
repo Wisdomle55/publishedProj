@@ -1,7 +1,6 @@
 
 var handPossibilites = ["rock", "paper", "scissors"];
 let userWins = 0;
-let inputVerification = true;
 
 
 function computerPlay() {
@@ -13,13 +12,17 @@ function playRound(playerHand, computerHand) {
     if (computerHand == playerHand) {
         return "It's a tie";
     }
+
+    /* check player hand vs paper */
     if (computerHand == "paper" && playerHand == "rock") {
         return "You lose! Paper beats Rock";
     }
     if (computerHand == "paper" && playerHand == "scissors") {
         userWins++;
-        return "You win! scissors beats Paper";
+        return "You win! Scissors beats Paper";
     }
+
+    /* check player hand vs rock */
     if (computerHand == "rock" && playerHand == "paper") {
         userWins++;
         return "You win! Paper beats Rock";
@@ -27,16 +30,19 @@ function playRound(playerHand, computerHand) {
     if (computerHand == "rock" && playerHand == "scissors") {
         return "You lose! Rock beats Scissors";
     }
+
+    /* check player hand vs scissors */
     if (computerHand == "scissors" && playerHand == "paper") {
         return "You lose! Scissors beats Paper";
     }
-    if (computerHand == "scissors" && playerHand == "rock") {
+    if (computerHand == "Scissors" && playerHand == "rock") {
         userWins++;
         return "You win! Rock beats Scissors";
     }
 }
 
 function game() {
+    console.log("Do you feel lucky punk, well do you?");
     for (let i = 0; i < 5; i++) {
         let playerHand = prompt("What's your play?");
         if (handPossibilites.includes(playerHand.toLowerCase())) {
